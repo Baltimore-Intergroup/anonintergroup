@@ -6,6 +6,8 @@ dependencies:
     - field.storage.anongroup.field_default_location
   module:
     - anongroups
+_core:
+  default_config_hash: '-q4-2Huv6a-FxJwGzxz6MB6cL27go6BfRnkjKpvj5Zg'
 id: anongroup.anongroup.field_default_location
 field_name: field_default_location
 entity_type: anongroup

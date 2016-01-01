@@ -5,6 +5,8 @@ dependencies:
   module:
     - anonlocations
     - geolocation
+_core:
+  default_config_hash: '-FHqDaEjWWNLt2qjFIPA_3358vVMtwGwnZamlgBkie4'
 id: anonlocation.field_coordinates
 field_name: field_coordinates
 entity_type: anonlocation

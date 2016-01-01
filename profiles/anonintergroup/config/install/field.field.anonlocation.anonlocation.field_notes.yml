@@ -1,19 +1,17 @@
-uuid: 3b252fb8-5e04-4be0-a752-82e80688f12a
+uuid: 98b23798-d944-48a9-a844-68e218af7d7b
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.anonlocation.field_directions
+    - field.storage.anonlocation.field_notes
   module:
     - anonlocations
     - text
-_core:
-  default_config_hash: rRr6bcfv6_drDriuVsCeJVSZF_HiofVEHAly5TO0VZk
-id: anonlocation.anonlocation.field_directions
-field_name: field_directions
+id: anonlocation.anonlocation.field_notes
+field_name: field_notes
 entity_type: anonlocation
 bundle: anonlocation
-label: Directions
+label: Notes
 description: ''
 required: false
 translatable: false

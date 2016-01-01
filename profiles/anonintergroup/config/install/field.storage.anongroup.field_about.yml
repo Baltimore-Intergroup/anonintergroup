@@ -5,6 +5,8 @@ dependencies:
   module:
     - anongroups
     - text
+_core:
+  default_config_hash: 5k2I4iDlIv6EElb5rhhW4LAuBzqm3L2fMZCo-Xk8k9E
 id: anongroup.field_about
 field_name: field_about
 entity_type: anongroup

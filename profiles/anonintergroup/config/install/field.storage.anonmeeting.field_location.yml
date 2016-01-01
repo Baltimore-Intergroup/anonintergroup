@@ -5,6 +5,8 @@ dependencies:
   module:
     - anonlocations
     - anonmeetings
+_core:
+  default_config_hash: mVGmtr0_XqUUw4nIQuORpg4nNh5w41XFPQih9P2peW4
 id: anonmeeting.field_location
 field_name: field_location
 entity_type: anonmeeting

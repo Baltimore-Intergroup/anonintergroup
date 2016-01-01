@@ -7,6 +7,8 @@ dependencies:
   module:
     - address
     - anonlocations
+_core:
+  default_config_hash: bwvbZJTZYcvbHAMwDUefZs6QCI5dpVLzSZxoJYT7UJc
 id: anonlocation.anonlocation.field_address
 field_name: field_address
 entity_type: anonlocation

@@ -5,6 +5,8 @@ dependencies:
   module:
     - anongroups
     - anonlocations
+_core:
+  default_config_hash: CsKfNikYpKN7wNK1m9qlxG2WoyspDxKxpcuNZt--Fww
 id: anongroup.field_default_location
 field_name: field_default_location
 entity_type: anongroup

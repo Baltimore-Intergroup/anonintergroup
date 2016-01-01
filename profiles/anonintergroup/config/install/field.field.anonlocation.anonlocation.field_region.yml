@@ -1,0 +1,28 @@
+uuid: 2ee6857d-dbbe-400a-9426-38aadc3e38b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.anonlocation.field_region
+    - taxonomy.vocabulary.region
+  module:
+    - anonlocations
+id: anonlocation.anonlocation.field_region
+field_name: field_region
+entity_type: anonlocation
+bundle: anonlocation
+label: Region
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      region: region
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

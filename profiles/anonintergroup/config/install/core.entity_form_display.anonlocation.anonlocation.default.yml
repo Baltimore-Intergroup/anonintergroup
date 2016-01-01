@@ -4,9 +4,15 @@ status: true
 dependencies:
   config:
     - field.field.anonlocation.anonlocation.field_address
+    - field.field.anonlocation.anonlocation.field_coordinates
+    - field.field.anonlocation.anonlocation.field_notes
+    - field.field.anonlocation.anonlocation.field_region
   module:
     - address
     - anonlocations
+    - text
+_core:
+  default_config_hash: pTzFPaKCOzCgZa7GDNBTCHkvbnuAWgb1UGw3KkZIdbM
 id: anonlocation.anonlocation.default
 targetEntityType: anonlocation
 bundle: anonlocation
@@ -18,6 +24,21 @@ content:
       default_country: null
     third_party_settings: {  }
     type: address_default
+  field_notes:
+    weight: 8
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+  field_region:
+    weight: 7
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
   name:
     type: string_textfield
     weight: -4
@@ -33,4 +54,5 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_coordinates: true

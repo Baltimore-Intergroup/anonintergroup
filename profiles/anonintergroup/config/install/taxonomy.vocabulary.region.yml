@@ -1,0 +1,9 @@
+uuid: e227e8d1-b454-42d6-9100-af0ca677caf6
+langcode: en
+status: true
+dependencies: {  }
+name: Region
+vid: region
+description: 'Neighborhood (for urban areas) or County (for rural areas)'
+hierarchy: 0
+weight: 0

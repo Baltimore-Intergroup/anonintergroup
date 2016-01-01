@@ -2,10 +2,10 @@
 
 /**
  * @file
- * Contains \Drupal\anonmeetings\AnonMeetingListBuilder.
+ * Contains \Drupal\anonlocations\AnonLocationListBuilder.
  */
 
-namespace Drupal\anonmeetings;
+namespace Drupal\anonlocations;
 
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\EntityListBuilder;
@@ -13,11 +13,11 @@ use Drupal\Core\Routing\LinkGeneratorTrait;
 use Drupal\Core\Url;
 
 /**
- * Defines a class to build a listing of Anonymous 12 Step Meeting entities.
+ * Defines a class to build a listing of Anonymous 12 Step Location entities.
  *
- * @ingroup anonmeetings
+ * @inlocation anonlocations
  */
-class AnonMeetingListBuilder extends EntityListBuilder {
+class AnonLocationListBuilder extends EntityListBuilder {
   use LinkGeneratorTrait;
   /**
    * {@inheritdoc}
@@ -25,6 +25,7 @@ class AnonMeetingListBuilder extends EntityListBuilder {
   public function buildHeader() {
     $header['id'] = $this->t('ID');
     $header['name'] = $this->t('Name');
+    $header['address'] = $this->t('Address');
     return $header + parent::buildHeader();
   }
 
@@ -32,16 +33,18 @@ class AnonMeetingListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildRow(EntityInterface $entity) {
-    /* @var $entity \Drupal\anonmeetings\Entity\AnonMeeting */
+    /** @var \Drupal\anonlocations\Entity\AnonLocation $entity */
     $row['id'] = $entity->id();
     $row['name'] = $this->l(
       $entity->label(),
       new Url(
-        'entity.anonmeeting.edit_form', array(
-          'anonmeeting' => $entity->id(),
+        'entity.anonlocation.edit_form', array(
+          'anonlocation' => $entity->id(),
         )
       )
     );
+    // @todo: is there a better way to do this?
+    $row['address'] = drupal_render($entity->get('field_address')->view(['label' => 'hidden']));
     return $row + parent::buildRow($entity);
   }
 

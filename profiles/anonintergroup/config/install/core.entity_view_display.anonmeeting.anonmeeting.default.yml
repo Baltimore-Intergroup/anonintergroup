@@ -1,15 +1,15 @@
+uuid: 91e1866d-258a-4113-9007-7fa51b1f115a
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.anonmeeting.anonmeeting.field_group
     - field.field.anonmeeting.anonmeeting.field_location
-    - field.field.anonmeeting.anonmeeting.field_time
   module:
-    - address
     - anonmeetings
-    - office_hours
     - user
+_core:
+  default_config_hash: '-za81skzvZBNrftTxXz4A_97gSZEhYh_U_4zR5ZnUs4'
 id: anonmeeting.anonmeeting.default
 targetEntityType: anonmeeting
 bundle: anonmeeting
@@ -23,35 +23,12 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
   field_location:
-    weight: 2
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: address_default
-  field_time:
-    weight: 1
+    weight: 4
     label: above
     settings:
-      daysformat: long
-      time_type: G
-      compress: false
-      grouped: false
-      showclosed: all
-      closedformat: Closed
-      separator:
-        days: '<br />'
-        grouped_days: ' - '
-        day_hours: ': '
-        hours_hours: '-'
-        more_hours: ', '
-      current_status:
-        position: hide
-        open_text: 'Currently open!'
-        closed_text: 'Currently closed'
-      timezone_field: ''
-      office_hours_first_day: ''
+      link: true
     third_party_settings: {  }
-    type: office_hours
+    type: entity_reference_label
   name:
     label: above
     type: string
